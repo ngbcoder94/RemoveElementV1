@@ -18,6 +18,11 @@ public class RemoveElementV1{
          */
         public int removeElement(int[] nums, int val){
                 
+                //Delcare/initialize counter var to hold value of non val integers in the array. 
+                int counter = 0; 
+
+                int i = 0;  //Initialize counter variable for loop below. 
+
         }
 
         //The main method for the class
