@@ -22,7 +22,15 @@ public class RemoveElementV1{
                 int counter = 0; 
 
                 int i = 0;  //Initialize counter variable for loop below. 
-
+                
+                //Create loop to iterate through array in search of values equal to val. 
+                while(i < nums.length){
+                        
+                        //Need to check if I have a correct match where nums[i] == val is T. 
+                        if(nums[i] == val){
+                                
+                        }
+                }
         }
 
         //The main method for the class
