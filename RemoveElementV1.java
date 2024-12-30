@@ -22,15 +22,37 @@ public class RemoveElementV1{
                 int counter = 0; 
 
                 int i = 0;  //Initialize counter variable for loop below. 
+                int lenOfNums = nums.length;    //Save the lenth of nums[] that's passed in. 
                 
                 //Create loop to iterate through array in search of values equal to val. 
-                while(i < nums.length){
+                while(i < lenOfNums){
                         
                         //Need to check if I have a correct match where nums[i] == val is T. 
                         if(nums[i] == val){
                                 
+                                //Need to create a helper variable to keep track of internal placement. 
+                                int j = i; 
+
+                                //Create a inner loop that will reorder array to remove the valued integer. 
+                                while(j < lenOfNums){
+                                        nums[j] = nums[j+1];    //Bump up each element. 
+                                        j ++
+                                }
+
+                                //Check if this is the first iteration of the loop.
+                                if(j == i){
+                                        nums[lenOfNums-1] = "_";
+                                }
+                        }
+
+                        //Now I need to check if we have the integer that I bumped to the front is !=  to val. 
+                        if(nums[i] != val){
+                                i += 1;             //Increment i by one.
+                                counter += 1;       //Increment counter by one
                         }
                 }
+                
+                return counter;     //Return the number of elements in nums that did != val. 
         }
 
         //The main method for the class
